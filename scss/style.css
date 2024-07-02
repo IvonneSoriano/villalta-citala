@@ -1,6 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 .hidden {
   display: none;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .dancing-script-title {
@@ -10,10 +17,25 @@
   font-style: normal;
 }
 
+.pink {
+  color: #f0d1cf;
+}
+
+.blue {
+  color: #c1d6e7;
+}
+
+.green {
+  color: #B0B98B;
+}
+
 .canva {
   width: 100vw;
   height: 100vh;
   background-color: #B0B98B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .canva .card {
   border-radius: 25px;
@@ -21,28 +43,61 @@
   overflow: hidden;
   background-image: url(../img/cover.jpg);
   background-size: cover;
+  width: 98%;
+  height: 98%;
+}
+.canva .card::after {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  top: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 247, 248, 0.3);
+}
+.canva .card .info {
+  width: 100%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.canva .card .info .details {
+  padding: 10px 25px;
+  z-index: 3;
+  text-align: center;
+}
+.canva .card .info .details > p > span {
+  font-weight: 700;
+}
+.canva .card .info .details .button {
+  text-decoration: none;
+  background-image: linear-gradient(45deg, hsl(4, 52%, 88%) 0%, hsl(353, 49%, 88%) 11%, hsl(341, 43%, 87%) 22%, hsl(326, 35%, 86%) 33%, hsl(302, 25%, 85%) 44%, hsl(273, 29%, 86%) 56%, hsl(248, 32%, 87%) 67%, hsl(228, 38%, 86%) 78%, hsl(215, 43%, 85%) 89%, hsl(207, 44%, 83%) 100%);
+  border: none;
+  padding: 10px;
+  color: #fff8f1;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 .canva .card .info .title {
+  z-index: 3;
   text-align: center;
   font-size: 50px;
+  position: relative;
   color: #B0B98B;
 }
 .canva .card .info .title > span {
   display: block;
-  line-height: 0.85;
+  line-height: 0.75;
 }
-.canva .card .info .title .h2 {
-  font-size: 150px;
+.canva .card .info .title > span.h2 {
+  font-size: 130px;
 }
-.canva .card .info .title .h2.pink {
+.canva .card .info .title > span.h2.pink {
   color: #f0d1cf;
 }
-.canva .card .info .title .h2.blue {
+.canva .card .info .title > span.h2.blue {
   color: #c1d6e7;
 }
 .canva .card .animals {
@@ -56,19 +111,30 @@
   max-width: 70%;
   position: absolute;
   max-height: 100%;
+  bottom: -100%;
 }
 .canva .card .animals > img.giraffe {
   left: -5%;
-  bottom: -2%;
   max-width: 50%;
+  transition: bottom 3s;
 }
 .canva .card .animals > img.lion {
   left: 50%;
   translate: -50%;
-  bottom: -5%;
   max-width: 50%;
+  transition: bottom 3s 1s;
 }
 .canva .card .animals > img.elephant {
+  right: -30%;
+  transition: bottom 3s;
+}
+.canva .card .animals.in .giraffe {
+  bottom: -2%;
+}
+.canva .card .animals.in .lion {
+  bottom: -5%;
+}
+.canva .card .animals.in .elephant {
   bottom: -5px;
   right: -30%;
 }
@@ -132,4 +198,5 @@
 
 body {
   margin: 0;
+  box-sizing: border-box;
 }/*# sourceMappingURL=style.css.map */

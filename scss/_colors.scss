@@ -3,12 +3,19 @@ $green: #B0B98B;
 $pink: #f0d1cf;
 $blue: #c1d6e7;
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 
 .hidden{
     display: none;
 }
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 .dancing-script-title {
     font-family: "Dancing Script", cursive;
@@ -16,3 +23,12 @@ $blue: #c1d6e7;
     font-weight: 800;
     font-style: normal;
   }
+.pink{
+    color: $pink;
+}
+.blue{
+    color: $blue;
+}
+.green{
+    color: $green;
+}
