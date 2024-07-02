@@ -57,11 +57,12 @@
 }
 .canva .card .info {
   width: 100%;
-  height: 80%;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: height 3s;
 }
 .canva .card .info .details {
   padding: 10px 25px;
@@ -73,6 +74,7 @@
 }
 .canva .card .info .details .button {
   text-decoration: none;
+  display: inline-block;
   background-image: linear-gradient(45deg, hsl(4, 52%, 88%) 0%, hsl(353, 49%, 88%) 11%, hsl(341, 43%, 87%) 22%, hsl(326, 35%, 86%) 33%, hsl(302, 25%, 85%) 44%, hsl(273, 29%, 86%) 56%, hsl(248, 32%, 87%) 67%, hsl(228, 38%, 86%) 78%, hsl(215, 43%, 85%) 89%, hsl(207, 44%, 83%) 100%);
   border: none;
   padding: 10px;
@@ -93,6 +95,7 @@
 }
 .canva .card .info .title > span.h2 {
   font-size: 130px;
+  transition: font-size 3s;
 }
 .canva .card .info .title > span.h2.pink {
   color: #f0d1cf;
@@ -102,10 +105,27 @@
 }
 .canva .card .animals {
   width: 100%;
-  height: 35%;
+  height: 30%;
   position: absolute;
   left: 0;
   bottom: 0;
+}
+.canva .card .animals .cloudyText {
+  position: absolute;
+  width: 37%;
+  font-size: 15px;
+  /* background: pink; */
+  top: -62%;
+  z-index: 5;
+  left: 18%;
+  opacity: 0;
+  transition: opacity 3s 3s;
+}
+.canva .card .animals .cloudyText.blue {
+  left: unset;
+  right: 12%;
+  top: -29%;
+  transition: opacity 3s 2s;
 }
 .canva .card .animals > img {
   max-width: 70%;
@@ -128,6 +148,19 @@
   right: -30%;
   transition: bottom 3s;
 }
+.canva .card .animals > img.cloud {
+  right: 0;
+  bottom: 65%;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 3s 2s;
+}
+.canva .card .animals > img.cloud.boy {
+  left: 5%;
+  bottom: 80%;
+  max-width: 54%;
+  transition: opacity 3s 3s;
+}
 .canva .card .animals.in .giraffe {
   bottom: -2%;
 }
@@ -136,7 +169,6 @@
 }
 .canva .card .animals.in .elephant {
   bottom: -5px;
-  right: -30%;
 }
 @media (min-width: 768px) {
   .canva .card .animals {
@@ -187,6 +219,18 @@
   .canva .card .animals > img.elephant {
     right: 15%;
   }
+}
+.canva .card.cloudy .info {
+  height: 50%;
+}
+.canva .card.cloudy .info .title > span.h2 {
+  font-size: 120px;
+}
+.canva .card.cloudy .animals .cloudyText {
+  opacity: 100%;
+}
+.canva .card.cloudy .animals > img.cloud {
+  opacity: 100%;
 }
 @media (min-width: 1024px) {
   .canva {

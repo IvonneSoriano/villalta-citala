@@ -29,15 +29,17 @@
     }
     .info {
       width: 100%;
-      height: 80%;
+      height: 70%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      transition: height 3s;
       .details {
         padding: 10px 25px;
         z-index: 3;
         text-align: center;
+        // overflow-y: scroll;
         > p {
           > span {
             font-weight: 700;
@@ -45,6 +47,7 @@
         }
         .button {
           text-decoration: none;
+          display: inline-block;
           background-image: linear-gradient(
             45deg,
             hsl(4deg 52% 88%) 0%,
@@ -78,6 +81,7 @@
 
           &.h2 {
             font-size: 130px;
+            transition: font-size 3s;
 
             &.pink {
               color: $pink;
@@ -91,11 +95,28 @@
     }
     .animals {
       width: 100%;
-      height: 35%;
+      height: 30%;
       position: absolute;
       left: 0;
       bottom: 0;
       // background: pink;
+      .cloudyText {
+        position: absolute;
+        width: 37%;
+        font-size: 15px;
+        /* background: pink; */
+        top: -62%;
+        z-index: 5;
+        left: 18%;
+        opacity: 0;
+          transition: opacity 3s 3s;
+        &.blue{
+          left: unset;
+          right: 12%;
+          top: -29%;
+          transition: opacity 3s 2s;
+        }
+      }
       > img {
         max-width: 70%;
         position: absolute;
@@ -116,6 +137,19 @@
           right: -30%;
           transition: bottom 3s;
         }
+        &.cloud {
+          right: 0;
+          bottom: 65%;
+          z-index: 4;
+          opacity: 0;
+          transition: opacity 3s 2s;
+          &.boy {
+            left: 5%;
+            bottom: 80%;
+            max-width: 54%;
+            transition: opacity 3s 3s;
+          }
+        }
       }
       &.in {
         .giraffe {
@@ -126,7 +160,6 @@
         }
         .elephant {
           bottom: -5px;
-          right: -30%;
         }
       }
     }
@@ -173,6 +206,28 @@
           }
           &.elephant {
             right: 15%;
+          }
+        }
+      }
+    }
+    &.cloudy {
+      .info {
+        height: 50%;
+        .title {
+          > span {
+            &.h2 {
+              font-size: 120px;
+            }
+          }
+        }
+      }
+      .animals {
+        .cloudyText{
+          opacity: 100%;
+        }
+        > img {
+          &.cloud {
+            opacity: 100%;
           }
         }
       }
