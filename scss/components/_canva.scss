@@ -1,0 +1,121 @@
+@import "../colors";
+
+.canva {
+  width: 100vw;
+  height: 100vh;
+  background-color: $green;
+
+  .card {
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(/img/cover.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .info {
+      .title {
+        text-align: center;
+        font-size: 50px;
+        color: $green;
+        > span {
+          display: block;
+          line-height: 0.85;
+        }
+        .h2 {
+          font-size: 150px;
+          &.pink{
+            color: $pink;
+          }
+          &.blue{
+            color: $blue;
+          }
+          
+        }
+      }
+    }
+    .animals {
+      width: 100%;
+      height: 35%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      // background: pink;
+      > img {
+        max-width: 70%;
+        position: absolute;
+        max-height: 100%;
+        &.giraffe {
+          left: -5%;
+          bottom: -2%;
+          max-width: 50%;
+        }
+        &.lion {
+          left: 50%;
+          translate: -50%;
+          bottom: -5%;
+          max-width: 50%;
+        }
+        &.elephant {
+          bottom: -5px;
+          right: -30%;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      .animals {
+        height: 35%;
+        > img {
+          max-height: 100%;
+          &.giraffe {
+            left: 7%;
+          }
+          &.elephant {
+            right: -5%;
+          }
+        }
+      }
+    }
+    @media (min-width: 1024px) {
+      width: 75%;
+      height: 85%;
+      .animals {
+        height: 35%;
+        > img {
+          max-height: 100%;
+          &.giraffe {
+            left: 15%;
+          }
+          &.elephant {
+            right: -5%;
+          }
+        }
+      }
+    }
+    @media (min-width: 1300px) {
+      width: 60%;
+      height: 90%;
+      .animals {
+        height: 35%;
+        > img {
+          max-height: 100%;
+          &.giraffe {
+            left: 25%;
+          }
+          &.elephant {
+            right: 15%;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
