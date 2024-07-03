@@ -9,10 +9,5 @@ $(document).ready(function(){
       $(".card").addClass("cloudy");
     },5000)
   }
-    // $(".nube").click(function(){
-    //     console.log("LCI")
-    //   $(".blue").addClass("in");
-    //   $(".pink").addClass("in");
-    // });
 
   });
