@@ -176,10 +176,17 @@
 }
 @media (min-width: 768px) {
   .canva .card .animals {
-    height: 35%;
+    height: 32%;
   }
   .canva .card .animals > img {
     max-height: 100%;
+  }
+  .canva .card .animals > img.cloud {
+    right: 10%;
+    max-width: 25%;
+  }
+  .canva .card .animals > img.cloud.boy {
+    max-width: 30%;
   }
   .canva .card .animals > img.giraffe {
     left: 7%;
@@ -199,6 +206,14 @@
   .canva .card .animals > img {
     max-height: 100%;
   }
+  .canva .card .animals > img.cloud {
+    max-width: 20%;
+    bottom: 88%;
+  }
+  .canva .card .animals > img.cloud.boy {
+    max-width: 24%;
+    left: 14%;
+  }
   .canva .card .animals > img.giraffe {
     left: 15%;
   }
@@ -216,6 +231,14 @@
   }
   .canva .card .animals > img {
     max-height: 100%;
+  }
+  .canva .card .animals > img.cloud {
+    max-width: 16%;
+    right: 24%;
+  }
+  .canva .card .animals > img.cloud.boy {
+    max-width: 19%;
+    left: 24%;
   }
   .canva .card .animals > img.giraffe {
     left: 25%;
